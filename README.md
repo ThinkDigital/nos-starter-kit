@@ -7,8 +7,8 @@
 ## Modem
   BC68 (Quectel)
 
-## Datasheet
-  TODO: referenciar nome do documento...
+## Guideline
+  https://www.thinkdigital.pt/downloads/NOS_Starter_Kit_CE.pdf
 
 ## Example
   The main.cpp file shows an example of how to connect to NB-IoT network.
