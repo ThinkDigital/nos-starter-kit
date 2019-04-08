@@ -120,5 +120,5 @@ OK
 +NPSMR:1 //after 10 seconds my device goes to sleep
 
 ## Notes
-To be able to use PSM, a request has to be made to telecommunication operator for the specific sim card
+To be able to use PSM, a request has to be made to the telecommunication operator for the sim card in use
 ​
