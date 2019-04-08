@@ -28,3 +28,12 @@
 
 ## 3rd step
   Copy only the files into the project that doesn't exist there or sync with git. If you're syncing with git, create your own .gitignore file
+
+## 4th
+  Compile your code
+
+## 5th
+  Flash into your starter kit
+
+## 6th
+  Have fun :)
