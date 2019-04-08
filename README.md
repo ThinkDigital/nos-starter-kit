@@ -11,21 +11,20 @@
   TODO: referenciar nome do documento...
 
 ## Example
-  If you are already seeing this doc, you must to know that although, some classes are finished and have been tested in other projects they aren't yet compatible in this project and the main.cpp isn't finished.
-
-  In next few days I will compile these files and set up an example to allow the kit to connect to network.
-
-  If you want to start to work on code before that, you can use these files as guidelines.
+  The main.cpp file shows an example of how to connect to NB-IoT network.
 
   !! Notice that this code was built using SystemWorkbench from AC6 and probably it wouldn't be compatible with other IDEs. Which means that HAL functions have to be changed. !!
 
 ## 1st step
   Use STM32CubeMX to generate your HAL libraries according to the available board peripherals
+  Check /doc/images/ to check uController pinout configuration
+  Use /doc/hardware to compare to your configuration
   Configure USART clocks and gpios modes
+  !! Don't forget to enable interrupts during usart configurations. The example uses interrupts for usart communication.
 
 ## 2nd step
   Export your project to your preferred IDE
   In order to use the libraries in this project, you have to convert your project to cpp and rename your main.c to main.cpp
 
 ## 3rd step
-  Copy only the files into the project that doesn't exist there our sync with git. If you're syncing with git, create your own .gitignore file
+  Copy only the files into the project that doesn't exist there or sync with git. If you're syncing with git, create your own .gitignore file

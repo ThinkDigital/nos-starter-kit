@@ -15,10 +15,10 @@
 | SPI1_MISO                   | PA6     | ANY                            |
 | SPI1_SCK                    | PA5     | ANY                            |
 | SPI1_NSS                    | PA4     | ANY                            |
-| SPI2_MOSI                   | PB15    | EXTERNAL_MEMORY                |
-| SPI2_MISO                   | PB14    | EXTERNAL_MEMORY                |
-| SPI2_SCK                    | PB13    | EXTERNAL_MEMORY                |
-| SPI2_NSS                    | PB12    | EXTERNAL_MEMORY                |
+| SPI2_MOSI                   | PB15    | EXTERNAL_MEMORY/NA             |
+| SPI2_MISO                   | PB14    | EXTERNAL_MEMORY/NA             |
+| SPI2_SCK                    | PB13    | EXTERNAL_MEMORY/NA             |
+| SPI2_NSS                    | PB12    | EXTERNAL_MEMORY/NA             |
 | I2C2_SDA                    | PB11    | ANY                            |
 | I2C2_SCL                    | PB10    | ANY                            |
 | I2C1_SDA                    | PB7     | ACCELEROMETER                  |
