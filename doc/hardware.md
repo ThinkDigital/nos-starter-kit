@@ -32,7 +32,8 @@
 | GPIO4                       | PC3     | ANY                            |
 | GPIO5                       | PC4     | EN_PERIPHERALS                 |
 | GPIO6                       | PC5     | MODEM_RESET                    |
-| AN1                         | PC9     | AN_TEMP                        |
+| ANALOG                      | PB0     | AN_TEMP                        |
+| ANALOG                      | PB1     | AN_BATTERY                     |
 | LED_R                       | PC10    | ANY                            |
 | LED_B                       | PC11    | ANY                            |
 | LED_G                       | PC12    | ANY                            |
