@@ -26,12 +26,12 @@ The `main.cpp` file shows an example of how to connect to NB-IoT network.
 
 **Note**: _don't forget to enable interrupts during USART configurations - the example uses interrupts for USART communication_
 
-## Step 2
+### Step 2
 
 - Export your project to your preferred IDE;
 - In order to use the libraries in this project, you have to convert your project to cpp and rename your main.c to main.cpp.
 
-## Step 3
+### Step 3
 
 - Copy only the files into the project that don't exist there or sync with git. If you're syncing with git, create your own `.gitignore` file;
 - Compile your code and flash into your starter kit;
