@@ -1,6 +1,4 @@
-
-
-# board STM32L0_NOS_KIT
+# Board STM32L0_NOS_KIT
 
 | Interface                   | IO      | Device                         |
 | :-------------------------- | ------: | ------------------------------ |
