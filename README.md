@@ -13,7 +13,7 @@ https://www.thinkdigital.pt/downloads/NOS_Starter_Kit_CE.pdf
 
 ## Example
 
-The `main.cpp` file shows an example of how to connect to NB-IoT network.
+The [`main.cpp`](Core/Src/main.cpp) file shows an example of how to connect to NB-IoT network.
 
 **Note**: _this code was built using SystemWorkbench from AC6 and probably wouldn't be compatible with other IDEs, meaning that HAL functions have to be changed_
 
