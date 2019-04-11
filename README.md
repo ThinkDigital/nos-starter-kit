@@ -1,39 +1,38 @@
-# kit-NB-IoT
-  code example to give the first steps in NB IoT world using NB IoT KIT
+# NOS Starter Kit
 
-## Processor
-  STM32L073RZ (STElectronics)
+Code sample to give the first steps in NB IoT world using NOS NB IoT KIT.
 
-## Modem
-  BC68 (Quectel)
+## Hardware
 
-## Guideline
-  https://www.thinkdigital.pt/downloads/NOS_Starter_Kit_CE.pdf
+- Processor: **STElectronics STM32L073RZ**
+- Modem: **Quectel BC68**
+
+## Guide
+
+https://www.thinkdigital.pt/downloads/NOS_Starter_Kit_CE.pdf
 
 ## Example
-  The main.cpp file shows an example of how to connect to NB-IoT network.
 
-  !! Notice that this code was built using SystemWorkbench from AC6 and probably it wouldn't be compatible with other IDEs. Which means that HAL functions have to be changed. !!
+The `main.cpp` file shows an example of how to connect to NB-IoT network.
 
-## 1st step
-  Use STM32CubeMX to generate your HAL libraries according to the available board peripherals
-  Check /doc/images/ to check uController pinout configuration
-  Use /doc/hardware to compare to your configuration
-  Configure USART clocks and gpios modes
-  !! Don't forget to enable interrupts during usart configurations. The example uses interrupts for usart communication.
+**Note**: _this code was built using SystemWorkbench from AC6 and probably wouldn't be compatible with other IDEs, meaning that HAL functions have to be changed_
 
-## 2nd step
-  Export your project to your preferred IDE
-  In order to use the libraries in this project, you have to convert your project to cpp and rename your main.c to main.cpp
+### Step 1
 
-## 3rd step
-  Copy only the files into the project that doesn't exist there or sync with git. If you're syncing with git, create your own .gitignore file
+- Use **STM32CubeMX** to generate your HAL libraries according to the available board peripherals;
+- Check `/doc/images/` to check **uController** pinout configuration;
+- Use `/doc/hardware` to compare to your configuration;
+- Configure USART clocks and gpios modes.
 
-## 4th
-  Compile your code
+**Note**: _don't forget to enable interrupts during USART configurations - the example uses interrupts for USART communication_
 
-## 5th
-  Flash into your starter kit
+## Step 2
 
-## 6th
-  Have fun :)
+- Export your project to your preferred IDE;
+- In order to use the libraries in this project, you have to convert your project to cpp and rename your main.c to main.cpp.
+
+## Step 3
+
+- Copy only the files into the project that don't exist there or sync with git. If you're syncing with git, create your own `.gitignore` file;
+- Compile your code and flash into your starter kit;
+- Have fun :smile:
