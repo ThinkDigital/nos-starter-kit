@@ -20,8 +20,8 @@ The `main.cpp` file shows an example of how to connect to NB-IoT network.
 ### Step 1
 
 - Use **STM32CubeMX** to generate your HAL libraries according to the available board peripherals;
-- Check `/doc/images/` to check **uController** pinout configuration;
-- Use `/doc/hardware` to compare to your configuration;
+- Check [images](doc/images) to check **uController** pinout configuration;
+- Check [hardware](doc/hardware.md) to compare to your configuration;
 - Configure USART clocks and gpios modes.
 
 **Note**: _don't forget to enable interrupts during USART configurations - the example uses interrupts for USART communication_
