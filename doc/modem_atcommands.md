@@ -1,33 +1,48 @@
+# Instructions to connect to network and set Power Saving Mode (PSM) on modem
 
-# Script to connect to network and set Power Saving Mode (PSM) on modem
+## Firmware version
 
-## firmware version
+```
 AT+QGMR  //check fw version
 
 BC68JAR01A08
 
 OK
+```
 
-## modem configuration
-//This part only need to be sent once, it is just to be sure that nconfig is set it up properly
+## Modem configuration
 
+This part only need to be sent once, it is just to be sure that nconfig is set it up properly.
+
+```
 AT+CFUN=0
 
 OK
+```
 
-AT+NCONFIG=CR_0354_0338_SCRAMBLING,TRUE //I enable scrambling for better power consumption
+Enable scrambling for better power consumption.
 
-OK
-
-AT+NCONFIG=CR_0859_SI_AVOID,TRUE //related with scrambled
-
-OK
-
-AT+NCONFIG=AUTOCONNECT,FALSE //I disable autoconnect
+```
+AT+NCONFIG=CR_0354_0338_SCRAMBLING,TRUE
 
 OK
 
-REBOOTING //Reboot device in order to use new setting with nconfig
+AT+NCONFIG=CR_0859_SI_AVOID,TRUE
+
+OK
+```
+
+Disable autoconnect.
+
+```
+AT+NCONFIG=AUTOCONNECT,FALSE
+
+OK
+```
+Reboot device in order to use new setting with nconfig
+
+```
+REBOOTING
 
 ÃâFø
 
@@ -44,15 +59,19 @@ REBOOT_CAUSE_APPLICATION_AT
 Neul
 
 OK
+```
 
-//once device boots I set up band
+Once device boots set up band.
 
+```
 AT+NBAND=20
 
 OK
+```
 
-//I enable some urc, cereg, psm and cscon if you don't need it you can omit this part
+Enable some URC, CEREG, PSM and CSCON if you don't need it you can omit this part.
 
+```
 AT+CEREG=2;+NPSMR=1;+CSCON=1
 
 OK
@@ -60,25 +79,42 @@ OK
 OK
 
 OK
+```
 
-## connect to network
-//I set up PSM, 1 hour for tau and 10 seconds for idle
+## Connect to network
 
-AT+CPSMS=1,,,"00100001","00000101" // if PSM is not desired, call AT+CPSMS=0
+Set up PSM, 1 hour for tau and 10 seconds for idle.
+
+```
+AT+CPSMS=1,,,"00100001","00000101"
 
 OK
+```
 
-AT+CFUN=1 //switch on the radio
+If PSM is not desired, call `AT+CPSMS=0`.
+
+Then, switch on the radio.
+
+```
+AT+CFUN=1
 
 +CEREG:0,0000,00000000,9
 
 OK
+```
 
-AT+CGDCONT=1,"IP","" //I send my APN, here is empty because it is automatically loaded by network with Vdf
+Send APN, here is empty because it is automatically loaded by network.
+
+```
+AT+CGDCONT=1,"IP",""
 
 OK
+```
 
-AT+COPS=1,2,"21401" //I do the attach
+Attach to network.
+
+```
+AT+COPS=1,2,"21401"
 
 OK
 
@@ -93,32 +129,48 @@ AT+NSOCR= DGRAM,17,16666,1 //I created my socket
 1
 
 OK
+```
 
-## send some data
-AT+NSOST=1,188.77.165.106,16666,12,48656C6C6F20576F726C6421 //I send some data to server
+## Send some data
+
+Send some data to server.
+
+```
+AT+NSOST=1,188.77.165.106,16666,12,48656C6C6F20576F726C6421
 
 1,12
 
 OK
+```
 
-## read received messages
+## Read messages
+
+Read my reply from server.
+
+```
 +NSONMI:1,12
 
-AT+NSORF=1,12 //I read my reply from server
+AT+NSORF=1,12
 
 1,188.77.165.106,16666,12,48656C6C6F20576F726C6421,0
 
 OK
+```
 
-## close socket to enter sleep mode
-AT+NSOCL=1 //I close the socket
+## Close socket to enter sleep mode
+
+Close the socket.
+
+```
+AT+NSOCL=1
 
 OK
 
-+CSCON:0 //start timer (remember 10 seconds that I set it up)
++CSCON:0 // start timer (remember 10 seconds that I set it up)
 
-+NPSMR:1 //after 10 seconds my device goes to sleep
++NPSMR:1 // after 10 seconds my device goes to sleep
+```
 
 ## Notes
-To be able to use PSM, a request has to be made to the telecommunication operator for the sim card in use
-​
+
+To be able to use PSM, a request has to be made to the telecommunication operator for the sim card in use.
